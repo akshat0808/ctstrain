@@ -2,8 +2,32 @@ package comm.example;
 
 public abstract class Transport 
 {
-	private double initialFuel;
-	private double finalFuel;
-	private double initialDistance;
-	private double finalDistance;
+	
+	private double distance;
+	private double efficiency;
+	public double getDistance()
+	{
+		return distance;
+	}
+	public void setDistance(double distance)
+
+{
+		this.distance=distance;
+		}
+	public double getEfficiency()
+	{
+		return efficiency;
+	}
+	public void setEfficiency(double efficiency)
+	{
+		this.efficiency=efficiency;
+	}
+	abstract double calculateDistance(double initialdistance, double finaldistance);
+	abstract double calculateEfficiency(double initialfuel, double finalfuel);
+	@Override
+	public String toString() {
+		//return "Transport [distance=" + distance + ", efficiency=" + efficiency + "]";
+		return"Fuel Efficiency:"+getEfficiency();
+	}
+	
 }
