@@ -28,7 +28,7 @@ public class DeleteCourseDemo {
 			System.out.println("Done!");
 		}
 		finally {
-			session.close();
+			//session.close();
 			factory.close();
 		}
 	}

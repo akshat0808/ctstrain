@@ -32,7 +32,7 @@ public class GetInstructorCoursesDemo {
 		}
 		finally {
 		
-			session.close();
+			//session.close();
 			
 			factory.close();
 		}

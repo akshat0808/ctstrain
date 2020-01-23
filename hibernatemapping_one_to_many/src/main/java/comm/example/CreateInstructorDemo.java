@@ -9,20 +9,13 @@ import comm.example.entity.Instructor;
 import comm.example.entity.InstructorDetail;
 public class CreateInstructorDemo {
 	public static void main(String[] args) {
-	SessionFactory factory = new Configuration()
-								.configure("hibernate.cfg.xml")
-								.addAnnotatedClass(Instructor.class)
-								.addAnnotatedClass(InstructorDetail.class)
-								.addAnnotatedClass(Course.class)
-								.buildSessionFactory();
+	SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Instructor.class).addAnnotatedClass(InstructorDetail.class).addAnnotatedClass(Course.class).buildSessionFactory();
 		Session session = factory.getCurrentSession();
 		try {			
 			Instructor tempInstructor = 
-					new Instructor("Akshat", "Vishnoi", "av@cognizant.com");
+					new Instructor("Akki", "Vishnoi", "av@cognizant.com");
 			
-			InstructorDetail tempInstructorDetail =
-					new InstructorDetail(
-							"www.youtube/av.com","volleyball");		
+			InstructorDetail tempInstructorDetail =new InstructorDetail("www.youtube/av.com","volleyball");		
 			tempInstructor.setInstructorDetail(tempInstructorDetail);
 			session.beginTransaction();
 			System.out.println("Saving instructor: " + tempInstructor);
@@ -31,7 +24,7 @@ public class CreateInstructorDemo {
 			System.out.println("Done!");
 		}
 		finally {
-			session.close();
+			//session.close();
 			factory.close();
 		}
 	}
