@@ -37,7 +37,7 @@ public class CreateCoursesDemo {
 			System.out.println("Done!");
 		}
 		finally {
-		
+			session.close();
 			factory.close();
 		}
 	}

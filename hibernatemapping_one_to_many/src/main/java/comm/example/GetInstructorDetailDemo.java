@@ -27,7 +27,7 @@ public class GetInstructorDetailDemo {
 			exc.printStackTrace();
 		} finally {
 
-			//session.close();
+			//asession.close();
 
 			factory.close();
 		}

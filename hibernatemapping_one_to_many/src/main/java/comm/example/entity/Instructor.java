@@ -56,12 +56,14 @@ public void add(Course tempCourse) {
 	courses.add(tempCourse);
 	
 	tempCourse.setInstructor(this);
+	
 }
 
 public void setInstructorDetail(InstructorDetail tempInstructorDetail) {
 	// TODO Auto-generated method stub
 	
 }
+
 
 
 
