@@ -27,7 +27,7 @@ This is the Home page CD.
  <h3>CD Administrator</h3>
 
  <ul>
- <li><a href="${pageContext.request.contextPath}/cd/showForm">Add a new cd </a></li>
+ <li><a href="${pageContext.request.contextPath}/user/">Add a new cd </a></li>
  </ul>
 
 
